@@ -31,6 +31,7 @@ Start to type Automation Scripts
     public void test01(){
         String url="https://jsonplaceholder.typicode.com/todos/123";
         Response response=given().when().accept("application/json").get(url);
+
 response.prettyPrint();
 response.
         then().

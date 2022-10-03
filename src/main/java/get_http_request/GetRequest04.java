@@ -2,7 +2,8 @@ package get_http_request;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.annotations.Test;
+import org.junit.Test;
+
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -24,6 +25,8 @@ and ages 21,61,and 23
 
 Response response=given().when().get(url);
 response.prettyPrint();
+response.prettyPeek();
+response.then().log().all();//it brings all thing in the response
 response.then().assertThat().contentType("application/json").statusCode(200);
 response.then().assertThat().body("data",hasSize(24),"data.employee_name",hasItem("Ashton Cox"),"data.employee_age",hasItems(21,61,23));
 

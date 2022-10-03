@@ -1,6 +1,10 @@
 package get_http_request;
 
 import base_urls.JsonPlaceHolderBaseUrl;
+import io.restassured.response.Response;
+import org.junit.Test;
+
+import static io.restassured.RestAssured.given;
 
 public class GetRequest06 extends JsonPlaceHolderBaseUrl {
 
@@ -18,5 +22,13 @@ public class GetRequest06 extends JsonPlaceHolderBaseUrl {
           4)Print all titles whose ids are less than 5
             Assert that "delectus aut autem" is one of the titles whose id is less than 5
      */
+@Test
+    public void test(){
+    String url="https://jsonplaceholder.typicode.com/todos";
+      Response response=given().when().get(url);
+      response.then().statusCode(200).contentType("application/json");
 
+
+
+}
 }
