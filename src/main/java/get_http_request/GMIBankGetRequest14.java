@@ -3,14 +3,13 @@ package get_http_request;
 import base_urls.GMIBankBAseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class GetRequest14 extends GMIBankBAseUrl {
+public class GMIBankGetRequest14 extends GMIBankBAseUrl {
     //String endpoint="https://www.gmibank.com/api/tp-customers/110472";
 
     @Test

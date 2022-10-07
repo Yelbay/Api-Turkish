@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequest15 extends GMIBankBAseUrl {
+public class GMIBankGetRequest15 extends GMIBankBAseUrl {
     @Test
     public void test() {
 
